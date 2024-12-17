@@ -7,6 +7,10 @@
 #include <typeinfo>
 #include <climits>
 #include <cfloat>
+#include <limits>
+#include <cstdlib>
+#include <cstring>
+#include <cctype>
 
 # define LRED	"\033[0;91m"
 # define RESET	"\033[0m"
@@ -33,6 +37,8 @@ public:
 	std::string	getInput(void) const;
 
 	static bool checkNumber(std::string const s);
+	static bool	checkLetters(std::string const s);
+
 	static bool	checkLiteral(std::string const s, int type);
 	static std::string	to_string(double d);
 
